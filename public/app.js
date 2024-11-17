@@ -33,8 +33,8 @@ validateButton.addEventListener('click', async () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ licensePlate, driverId }),
             });
-console.log(processedLicense)
             const data = await response.json();
+            console.log(data)
             if (response.ok) {
                 // Mostrar datos procesados
                 processedLicense.textContent = data.invoice.vehicle;

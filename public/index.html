@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Sistema de Autodetección</h1>
+        <!-- Formulario de Validación -->
         <form id="transaction-form">
             <label for="licensePlate">Matrícula del Vehículo:</label>
             <input type="text" id="licensePlate" placeholder="Ingrese la matrícula" required>
@@ -16,10 +17,20 @@
             <label for="driverId">Identificación del Conductor:</label>
             <input type="text" id="driverId" placeholder="Ingrese ID del conductor" required>
 
-            <button type="submit">Validar y Procesar</button>
+            <button type="button" id="validateButton">Validar Datos</button>
         </form>
 
+        <!-- Div para mostrar el resultado general -->
         <div id="result"></div>
+
+        <!-- Div para mostrar los datos procesados -->
+        <div id="processedData" class="hidden">
+            <h2>Datos Procesados</h2>
+            <p><strong>Matrícula:</strong> <span id="processedLicense"></span></p>
+            <p><strong>Conductor:</strong> <span id="processedDriver"></span></p>
+            <p><strong>Tarifa Aplicada:</strong> $<span id="processedFare"></span></p>
+            <p><strong>Fecha:</strong> <span id="processedTimestamp"></span></p>
+        </div>
     </div>
 
     <script src="app.js"></script>

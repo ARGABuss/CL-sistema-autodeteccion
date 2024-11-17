@@ -46,8 +46,13 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background: #45a049;
+button.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+button.confirm {
+    background: #007bff;
 }
 
 #result {

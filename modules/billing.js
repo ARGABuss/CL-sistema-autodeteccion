@@ -1,7 +1,7 @@
 const generateInvoice = (vehicle, fare) => {
     return {
-        vehicle: vehicle.licensePlate,
-        driver: vehicle.registeredDriver,
+        vehicle: vehicle.license_plate,
+        driver: vehicle.registered_driver,
         fare: fare,
         timestamp: new Date().toISOString(),
     };

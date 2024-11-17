@@ -1,11 +1,12 @@
-const vehicles = require('../data/vehicles.json');
+const db = require('../database');
 
 const identifyVehicle = async (licensePlate) => {
-    return vehicles.find(vehicle => vehicle.licensePlate === licensePlate) || null;
+    const result = await db.query('SELECT * FROM vehicles WHERE license_plate = $1', [licensePlate]);
+    return result.rows[0] || null;
 };
 
 const validateDriver = async (vehicle, driverId) => {
-    return vehicle.registeredDriver === driverId;
+    return vehicle.registered_driver === driverId;
 };
 
 module.exports = { identifyVehicle, validateDriver };

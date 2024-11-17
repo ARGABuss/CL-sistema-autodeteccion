@@ -1,12 +1,10 @@
-const fs = require('fs');
-const path = require('path');
+const db = require('../database');
 
-const transactionsPath = path.join(__dirname, '../data/transactions.json');
-
-const logTransaction = (invoice) => {
-    const transactions = JSON.parse(fs.readFileSync(transactionsPath, 'utf-8'));
-    transactions.push(invoice);
-    fs.writeFileSync(transactionsPath, JSON.stringify(transactions, null, 2));
+const logTransaction = async (invoice) => {
+    await db.query(
+        'INSERT INTO transactions (vehicle_id, fare) VALUES ($1, $2)',
+        [invoice.vehicle.id, invoice.fare]
+    );
     console.log('Transacción registrada con éxito.');
 };
 

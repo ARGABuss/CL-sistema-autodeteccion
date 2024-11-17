@@ -1,0 +1,14 @@
+[
+    {
+        "licensePlate": "ABC123",
+        "registeredDriver": "D12345",
+        "preferentialFare": 50,
+        "defaultFare": 100
+    },
+    {
+        "licensePlate": "XYZ789",
+        "registeredDriver": "D67890",
+        "preferentialFare": 45,
+        "defaultFare": 90
+    }
+]

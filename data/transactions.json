@@ -1,0 +1,14 @@
+[
+  {
+    "vehicle": "ABC123",
+    "driver": "D12345",
+    "fare": 50,
+    "timestamp": "2024-11-17T14:57:27.076Z"
+  },
+  {
+    "vehicle": "ABC123",
+    "driver": "D12345",
+    "fare": 50,
+    "timestamp": "2024-11-17T15:02:42.478Z"
+  }
+]
